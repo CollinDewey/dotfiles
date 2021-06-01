@@ -1,0 +1,23 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "",
+                "Name": ""
+            }
+        ],
+        "Category": "",
+        "Description": "Custom panel featuring application menu, global menus, task manager and system tray",
+        "EnabledByDefault": true,
+        "Id": "org.kde.plasma.desktop.LegitMagicPanel",
+        "License": "LGPLv2+",
+        "Name": "Legit_Magic Panel",
+        "ServiceTypes": [
+            "Plasma/LayoutTemplate"
+        ],
+        "Version": "1.0",
+        "Website": ""
+    },
+    "X-Plasma-ContainmentCategories": "panel",
+    "X-Plasma-Shell": "plasmashell"
+}
