@@ -48,7 +48,7 @@ Uptime ${alignr}${uptime}
 AMD GPU TEMP ${alignr}${execi 2 sensors | grep 'edge:' | cut -c16-17} C
 NVIDIA GPU TEMP ${alignr}${execi 2 bash ~/.nvidia.sh}
 CPU TEMP ${alignr}${execi 2 sensors | grep 'Tdie' | cut -c16-19} C
-GOVENOR ${alignr}${execi 2 cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor}
+GOVERNOR ${alignr}${execi 2 cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor}
 FAN POLICY ${alignr}${if_match ${execi 2 cat /sys/devices/platform/faustus/throttle_thermal_policy} == 0}NORMAL${endif}${if_match ${execi 2 cat /sys/devices/platform/faustus/throttle_thermal_policy} == 1}TURBO${endif}${if_match ${execi 2 cat /sys/devices/platform/faustus/throttle_thermal_policy} == 2}QUIET${endif}
 CPU FREQ ${alignr}${freq} MHz
 
