@@ -11,7 +11,7 @@ panel.width = screenGeometry(panelScreen).width;
 var kicker = panel.addWidget("org.kde.plasma.kicker");
 kicker.currentConfigGroup = ["General"];
 kicker.writeConfig("useCustomButtonImage", "true");
-kicker.writeConfig("customButtonImage", "/home/collin/.icons/plasma-logo-monochrome.svg");
+kicker.writeConfig("customButtonImage", "start-here-kde-plasma");
 kicker.writeConfig("favoriteSystemActions", "");
 
 //Global Menu, Spacer, Separator
@@ -34,10 +34,11 @@ const systemTrayPriv = desktopById(systemTrayPrivID);
 systemTrayPriv.currentConfigGroup = ["General"];
 const extraItems = systemTrayPriv.readConfig("extraItems").split(",");
 const hiddenItems = systemTrayPriv.readConfig("hiddenItems").split(",");
-extraItems.push("PreMiD1");
-hiddenItems.push("PreMiD1");
-extraItems.push("flameshot");
-hiddenItems.push("flameshot");
+const pushedItems = ["PreMID1", "premid", "flameshot"];
+pushedItems.forEach(item => {
+	extraItems.push(item);
+	hiddenItems.push(item);
+});
 systemTrayPriv.writeConfig("extraItems", extraItems);
 systemTrayPriv.writeConfig("hiddenItems", hiddenItems);
 
