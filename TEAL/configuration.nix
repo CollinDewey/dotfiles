@@ -4,7 +4,7 @@
   boot.initrd.availableKernelModules = [ "ahci" "ohci_pci" "ehci_pci" "nvme" "xhci_pci" "usb_storage" "usbhid" "sd_mod" "sr_mod" ];
   boot.extraModulePackages = [ config.boot.kernelPackages.v4l2loopback ];
   boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.kernelParams = [ "iommu=pt" ];
+  boot.kernelParams = [ "iommu=soft" ];
   boot.kernelModules = [ "kvm-amd" "v4l2loopback" ];
   powerManagement.cpuFreqGovernor = "performance";
   swapDevices = [ { device = "/swapfile"; size = 8192; } ];
