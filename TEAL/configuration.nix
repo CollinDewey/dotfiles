@@ -204,7 +204,7 @@
   # Nix Garbage Collection
   nix.gc.automatic = true;
   nix.gc.options = "--delete-older-than 30d";
-  nix.autoOptimiseStore = true;
+  nix.settings.auto-optimise-store = true;
 
   # Nix Auto Update
   system.autoUpgrade.enable = true;
