@@ -165,6 +165,7 @@
     vlc
     rclone
     rclone-browser
+    comma
     home-manager
   ];
 
