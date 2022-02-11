@@ -166,6 +166,7 @@
     rclone
     rclone-browser
     comma
+    youtube-dl
     home-manager
   ];
 
