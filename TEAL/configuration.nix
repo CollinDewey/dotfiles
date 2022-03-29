@@ -19,10 +19,10 @@
     fsType = "ntfs";
   };
 
-  #fileSystems."/mnt/Data" = {
-  #  device = "/dev/disk/by-label/Data";
-  #  fsType = "ext4";
-  #};
+  fileSystems."/mnt/Storage" = {
+    device = "/dev/disk/by-label/Storage";
+    fsType = "ext4";
+  };
 
   fileSystems."/mnt/Other" = {
     device = "/dev/disk/by-label/Other";
