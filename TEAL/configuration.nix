@@ -180,6 +180,7 @@
     comma
     youtube-dl
     home-manager
+    cura
   ];
 
   services.duplicati = {
@@ -205,6 +206,12 @@
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
   #services.openssh.permitRootLogin = "yes";
+
+  services.octoprint.enable = true;
+  services.mjpg-streamer = {
+    enable = true;
+    inputPlugin = "input_uvc.so -d /dev/video1 -r 1280x720";
+  };
 
   # Disable the Firewall
   networking.firewall.enable = false;
