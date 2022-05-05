@@ -89,6 +89,9 @@ in
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
+  # GPG
+  programs.gnupg.agent.enable = true; 
+
   imports = [ (import "${home-manager}/nixos") ];
   users.groups.collin.gid = 1000;
   users.users.collin = {
@@ -106,6 +109,8 @@ in
     home.stateVersion = "22.05";
     programs.git = {
       enable = true;
+      signing.signByDefault = true;
+      signing.key = "21A02BCB3C3ABEDA";
       userName = "LegitMagic";
       userEmail = "76862862+LegitMagic@users.noreply.github.com";
     };
@@ -176,6 +181,7 @@ in
     rclone
     comma
     youtube-dl
+    pinentry-curses
   ];
 
   # Make Stuff Pretty With Oh-My-ZSH
