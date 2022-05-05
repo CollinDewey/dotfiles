@@ -151,6 +151,7 @@ in
       cura
       lunar-client
       polymc
+      conky
     ];
   };
 
