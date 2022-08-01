@@ -3,7 +3,7 @@
   boot.initrd.kernelModules = [ "nvme" ];
   systemd.enableEmergencyMode = false;
   boot.kernelParams = [ "panic=1" "boot.panic_on_fail" ];
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelPackages = pkgs.linuxPackages_zen;
   boot.cleanTmpDir = true;
   powerManagement.cpuFreqGovernor = "performance";
   swapDevices = [ { device = "/swapfile"; size = 16384; } ];
@@ -52,6 +52,8 @@
     neofetch
     killall
     ncdu
+    comma
+    nix-index
   ];
 
   users.defaultUserShell = pkgs.zsh;
@@ -69,6 +71,7 @@
   networking = {
     hostName = "BROWN";
     nameservers = [ "8.8.8.8" "1.1.1.1" ];
+    useDHCP = false;
     interfaces.enp0s3.useDHCP = true;
     firewall = {
       enable = true;
