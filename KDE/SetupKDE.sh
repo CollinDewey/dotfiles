@@ -4,8 +4,7 @@ pushd /tmp
 
 ### Install dependencies
 
-git clone https://github.com/KDE/plasma-desktop.git
-git checkout afb390d #TEMPORARY FOR OLDER PLASMA VERSIONS (Version with .desktop)
+git clone -b Plasma/5.27 https://github.com/KDE/plasma-desktop.git
 sed -i 's/Layout.fillWidth: true/Layout.fillWidth: false/g' plasma-desktop/applets/taskmanager/package/contents/ui/main.qml
 plasmapkg2 -i plasma-desktop/applets/taskmanager/package
 rm -rf plasma-desktop
