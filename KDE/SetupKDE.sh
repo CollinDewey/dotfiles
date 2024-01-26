@@ -65,13 +65,13 @@ kwriteconfig5 --file "kwinrc" --group "org.kde.kdecoration2" --key "ButtonsOnRig
 # Change moving window to Alt
 kwriteconfig5 --file "kwinrc" --group "MouseBindings" --key "CommandAllKey" "Alt"
 
-git clone https://github.com/LegitMagic/dotfiles.git dotfiles
-kpackagetool5 -t Plasma/LayoutTemplate --install dotfiles/KDE/LegitMagicPanel
+git clone https://github.com/CollinDewey/dotfiles.git dotfiles
+kpackagetool5 -t Plasma/LayoutTemplate --install dotfiles/KDE/CustomPanel
 rm -rf dotfiles
 
 popd
 
 echo "Logout and back in"
 
-#To maybe remove all widgets and add the LegitMagicPanel?
+#To maybe remove all widgets and add the CustomPanel?
 #https://unix.stackexchange.com/questions/141634/how-can-i-run-a-kde-plasma-script-from-command-line-without-gui

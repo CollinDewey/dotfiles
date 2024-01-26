@@ -9,9 +9,9 @@
         "Category": "",
         "Description": "Custom panel featuring application menu, global menus, task manager and system tray",
         "EnabledByDefault": true,
-        "Id": "org.kde.plasma.desktop.LegitMagicPanel",
+        "Id": "org.kde.plasma.desktop.CustomPanel",
         "License": "",
-        "Name": "Legit_Magic Panel",
+        "Name": "Custom Panel",
         "ServiceTypes": [
             "Plasma/LayoutTemplate"
         ],

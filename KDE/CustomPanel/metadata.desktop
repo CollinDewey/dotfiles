@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=Legit_Magic Panel
+Name=Custom Panel
 Comment=Custom panel featuring application menu, global menus, task manager and system tray
 Type=Service
 X-KDE-ServiceTypes=Plasma/LayoutTemplate
@@ -7,7 +7,7 @@ X-Plasma-Shell=plasmashell
 X-Plasma-ContainmentCategories=panel
 X-KDE-PluginInfo-Author=Legit_Magic
 X-KDE-PluginInfo-Email=
-X-KDE-PluginInfo-Name=org.kde.plasma.desktop.LegitMagicPanel
+X-KDE-PluginInfo-Name=org.kde.plasma.desktop.CustomPanel
 X-KDE-PluginInfo-Version=1.1
 X-KDE-PluginInfo-Website=https://www.kde.org/plasma-desktop
 X-KDE-PluginInfo-Category=
